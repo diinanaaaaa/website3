@@ -1,0 +1,588 @@
+/* General Styles */
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0a0a0a; /* Dark background */
+    color: white;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+	padding-top: 80px; /* Prevents header overlap */
+}
+
+/* Main Table */
+.main-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95); /* Dark transparent background */
+    z-index: 1000; /* Ensures it stays on top of everything */
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5); /* Red racing-themed shadow */
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo img {
+    height: 50px; /* Adjust based on your logo size */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #ff0000; /* Racing red hover effect */
+}
+
+/* Adjust content to avoid being hidden behind the fixed header */
+body {
+    padding-top: 80px; /* Adjust based on header height */
+}
+
+/* Header */
+.header {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+}
+
+/* Navigation */
+.navigation .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    padding: 8px 15px;
+}
+
+.nav-links a:hover {
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+/* Contact Buttons */
+.contact-info .btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.call-btn {
+    background: #e81e1e;
+    color: white;
+}
+
+.whatsapp-btn {
+    background: #27a957;
+    color: white;
+}
+
+.call-btn:hover, .whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+
+/* Banner */
+.banner {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.banner-content img {
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ff0000;
+}
+
+/* ========== MOBILE RESPONSIVENESS ========== */
+@media (max-width: 768px) {
+    /* Make header responsive */
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    /* Navigation Styles */
+    .navigation {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 15px 0;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        padding: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    /* Ensure banner scales properly */
+    .banner-content img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    /* Adjust services section for smaller screens */
+    .services-container, .review-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .service-box, .review-box {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    /* Footer adjustments */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        max-width: 100%;
+    }
+}
+
+
+/* Location Navigation */
+.location-navigation {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.location-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+.location-links li {
+    display: inline;
+}
+
+.location-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+    padding: 8px 15px;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+}
+
+.location-links a:hover {
+    background: #ff0000;
+    color: black;
+}
+
+/* Services Section */
+.services-section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Controls spacing between boxes */
+        }
+
+        .service-box {
+            background-color: darkred;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px; /* Set a fixed width */
+        }
+
+        .service-box img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .service-box p {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+/* Reviews Section */
+
+.review-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+    gap: 20px; /* Adjust spacing between items */
+    justify-content: center;
+    padding: 20px;
+}
+
+.review-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.review-box {
+    background: #111;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ff0000;
+    transition: 0.3s;
+
+}
+
+.review-box img {
+    width: 100%;
+    border-radius: 10px;
+	
+}
+
+.btn-google-review {
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #ff0000;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-google-review:hover {
+    background: white;
+    color: black;
+}
+
+.location {
+    background: #ffcc00; /* Bright yellow for visibility */
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+    border: 2px solid #ffcc00;
+}
+
+.location:hover {
+    background: #ffcc00;
+    color: #ffcc00;
+    border: 2px solid #ffcc00;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ffcc00;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.9);
+    border-top: 3px solid #ff0000;
+}
+
+.contact-container h2 {
+    color: #ff0000;
+}
+
+.contact-container .btn {
+   display: inline-block;
+    background: #27a957; /* WhatsApp Green */
+    color: black;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    border: 4px solid #25d366;
+    box-shadow: 0 0 15px #25d366, 0 0 25px #25d366 inset;
+    position: relative;
+    overflow: hidden;
+}
+/* ==========================
+   🔹 Location Section
+========================== */
+.location-section {
+    background-color: #0a0a0a; /* Dark background */
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 3px solid #ff0000; /* Adds a red top border */
+}
+
+.location-section h2 {
+    font-size: 28px;
+    color: #ff0000; /* Red for emphasis */
+    margin-bottom: 10px;
+}
+
+.location-section p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Map Container */
+.map-container::after {
+    content: "";
+    display: block;
+    width: 50%; /* Adjust width to center properly */
+    height: 3px;
+    background: #ccc;
+    margin: 20px auto; /* Centers it properly */
+    border-radius: 5px;
+}
+
+
+/* Styled Google Map */
+.map-container iframe {
+    width: 90%;
+    max-width: 800px;
+    height: 450px;
+    border: 5px solid #ddd; /* Soft border */
+    border-radius: 10px; /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Separator Line Below Map */
+.map-container::after {
+    content: "";
+    display: block;
+    width: 80%; /* Adjust width */
+    height: 3px; /* Thickness of the line */
+    background: #ccc; /* Line color */
+    margin: 20px auto 0; /* Space above & below */
+    border-radius: 5px;
+}
+
+
+
+/* Footer */
+.footer {
+    background: #111;
+    padding: 40px 0;
+    text-align: center;
+    color: white;
+    border-top: 3px solid #ff0000;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-bottom: 2px solid #ff0000;
+}
+
+.footer-column {
+    max-width: 300px;
+    text-align: left;
+    padding: 10px;
+}
+
+.footer-column h3 {
+    color: #ff0000;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ff0000;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-column p {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 14px;
+    color: gray;
+}
+
+@media (max-width: 768px) {
+    body {
+        transform: scale(0.85);
+        transform-origin: top left;
+    }
+}
+
+/* Make all images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center images */
+}
+
+/* Fix banner image */
+.banner-content img {
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ff0000;
+}
+
+/* Adjust images inside services & reviews */
+.service-box img, .review-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    /* Adjust header & navigation */
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Adjust services section for mobile */
+    .services-container, .review-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .service-box, .review-box {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    /* Footer adjustments */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        max-width: 100%;
+    }
+}
+
+
