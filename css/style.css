@@ -25,11 +25,12 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.95); /* Dark transparent background */
-    z-index: 1000; /* Ensures it stays on top of everything */
+    background: rgba(0, 0, 0, 0.95); /* Keeps it visible */
+    z-index: 1000;
     padding: 15px 0;
-    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5); /* Red racing-themed shadow */
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5); /* Adds a shadow effect */
 }
+
 
 
 .nav-container {
@@ -98,10 +99,17 @@ body {
 }
 
 /* Navigation */
-.navigation .nav-links {
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .nav-links li {
@@ -111,15 +119,15 @@ body {
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
     font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
     transition: 0.3s;
-    padding: 8px 15px;
+    border-bottom: 2px solid transparent;
 }
 
 .nav-links a:hover {
-    color: #ff0000;
-    text-shadow: 0 0 10px #ff0000;
+    border-bottom: 2px solid #ff0000;
 }
 
 /* Contact Buttons */
@@ -584,5 +592,31 @@ img {
         max-width: 100%;
     }
 }
+
+.fixed-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000; /* Ensures it stays on top of other elements */
+}
+
+.fixed-contact .btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.fixed-contact .btn:hover {
+    transform: scale(1.1);
+}
+
 
 
